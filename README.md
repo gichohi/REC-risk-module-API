@@ -72,6 +72,6 @@ Example GET
 
 ### OpenAPI Documenation
 
-Run the server and browse to localhost:8080/swagger-ui.html
+Run the server and browse to `http://localhost:8080/swagger-ui.html`
 
 
