@@ -15,7 +15,7 @@ Run the project by invoking the command
 
 ## About the service
 
-The service is a REST service. It uses an in-memory database (H2) to store the data. You can view the H2 database at `http://localhost:8080/h2-console`.
+The service is a REST service. It uses an in-memory database (H2) to store the data. It fetched data from files in the resource folder and loads the data in a H2 database. You can view the H2 database at `http://localhost:8080/h2-console`.
 
 ## API Endpoints
 
