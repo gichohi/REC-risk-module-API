@@ -15,9 +15,12 @@ import org.springframework.http.HttpStatus;
 import com.digitech.rec.risk.api.models.Report;
 import com.digitech.rec.risk.api.services.DataService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+@Tag(name = "REC API", description = "The REC risk API")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/reports")
@@ -26,6 +29,7 @@ public class ApiController {
 
     private final DataService dataService;
 
+    @Operation(summary = "Get all the report data", description = "Returns a JSON array of the entire report table", tags = {"report"})
     @GetMapping("")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<Report>> getAllProjects() {
@@ -34,6 +38,7 @@ public class ApiController {
         return new ResponseEntity<>(projectList, HttpStatus.OK);
     }
 
+    @Operation(summary = "Get a filtered report with multipe filter attributes", description = "Returns a filtered list", tags = {"filter"})
     @GetMapping(path = "/filter")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<Report>> filterRecords(
