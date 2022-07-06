@@ -73,7 +73,7 @@ public class ReportRepository {
         List<String> regions = new ArrayList<>();
         List<String> countries = new ArrayList<>();
         List<String> cedants = new ArrayList<>();
-        List<String> groupCedants = new ArrayList<>();
+        List<String> cedantGroups = new ArrayList<>();
         List<String> branches = new ArrayList<>();
         List<String> validationStatuses = new ArrayList<>();
         List<String> confirmationStatuses = new ArrayList<>();
@@ -96,11 +96,11 @@ public class ReportRepository {
              }
              if(key.equals("cedant")){
                 queryString += " and cedants.name in (:cedants)";
-                groupCedants = Arrays.asList(value.split(","));
+                cedants = Arrays.asList(value.split(","));
              }
-             if(key.equals("group_cedant")){
-                queryString += " and group_cedants.name in (:groupCedants)";
-                groupCedants = Arrays.asList(value.split(","));
+             if(key.equals("cedant_group")){
+                queryString += " and group_cedants.name in (:cedantGroups)";
+                cedantGroups = Arrays.asList(value.split(","));
              }
              if(key.equals("validation_status")){
                 queryString += " and slips.validations_status in (:validationStatuses)";
@@ -125,8 +125,8 @@ public class ReportRepository {
         if(cedants.size() > 0){
             query.setParameter("cedants", cedants);
         }
-        if(groupCedants.size() > 0){
-            query.setParameter("groupCedants", groupCedants);
+        if(cedantGroups.size() > 0){
+            query.setParameter("cedantGroups", cedantGroups);
         }
         if(validationStatuses.size() > 0){
             query.setParameter("validationStatuses", validationStatuses);
