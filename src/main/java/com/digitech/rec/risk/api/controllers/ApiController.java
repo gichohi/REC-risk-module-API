@@ -48,9 +48,7 @@ public class ApiController {
             @RequestParam Optional<String> cedant_group,
             @RequestParam Optional<String> cedant,
             @RequestParam Optional<String> confirmation_status,
-            @RequestParam Optional<String> verification_status,
-            @RequestParam Optional<String> published_date,
-            @RequestParam Optional<String> edited_period) {
+            @RequestParam Optional<String> verification_status) {
         log.info("Filter Records");
         HashMap<String, String> params = new HashMap<>();
 
@@ -61,8 +59,6 @@ public class ApiController {
         cedant.ifPresent(s -> params.put("cedant", s));
         confirmation_status.ifPresent(s -> params.put("confirmation_status", s));
         verification_status.ifPresent(s -> params.put("verification_status", s));
-        published_date.ifPresent(s -> params.put("published_date", s));
-        edited_period.ifPresent(s -> params.put("edited_period", s));
         List<Report> projectList = dataService.filter(params);
         return new ResponseEntity<>(projectList, HttpStatus.OK);
     }

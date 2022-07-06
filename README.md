@@ -70,4 +70,8 @@ Example GET
 
 `http://127.0.0.1:8080/api/v1/reports/filter?cedant=HYPER NON VIE ASSURANCE&confirmation_status=Confirmed`
 
+### OpenAPI Documenation
+
+Run the server and browse to localhost:8080/swagger-ui.html
+
 
