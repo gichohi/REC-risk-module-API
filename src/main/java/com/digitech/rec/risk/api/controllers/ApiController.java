@@ -32,7 +32,7 @@ public class ApiController {
     @Operation(summary = "Get all the report data", description = "Returns a JSON array of the entire report table", tags = {"report"})
     @GetMapping("")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<Report>> getAllProjects() {
+    public ResponseEntity<List<Report>> getAllRecords() {
         log.info("Find all records");
         List<Report> projectList = dataService.findall();
         return new ResponseEntity<>(projectList, HttpStatus.OK);
