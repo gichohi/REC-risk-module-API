@@ -1,4 +1,4 @@
-package com.degitech.rec.risk.api.utils;
+package com.digitech.rec.risk.api.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

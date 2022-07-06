@@ -1,4 +1,4 @@
-package com.degitech.rec.risk.api.utils;
+package com.digitech.rec.risk.api.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.degitech.rec.risk.api.models.Region;
+import com.digitech.rec.risk.api.models.Region;
 
 import lombok.extern.slf4j.Slf4j;
 

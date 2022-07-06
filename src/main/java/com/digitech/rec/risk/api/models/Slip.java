@@ -1,4 +1,4 @@
-package com.degitech.rec.risk.api.models;
+package com.digitech.rec.risk.api.models;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.degitech.rec.risk.api.models;
+package com.digitech.rec.risk.api.models;
 
 import java.util.Date;
 
@@ -16,14 +16,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "group_cedants")
+@Table(name = "branches")
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GroupCedant {
+public class Branch {
     @Id
     private String id;
+
+    private String code;
 
     private String name;
 
@@ -34,5 +36,4 @@ public class GroupCedant {
     @UpdateTimestamp
     @Column(name="updated_at")
     private Date updatedAt;
-    
 }

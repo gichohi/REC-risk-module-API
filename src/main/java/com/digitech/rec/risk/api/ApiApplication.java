@@ -1,4 +1,4 @@
-package com.degitech.rec.risk.api;
+package com.digitech.rec.risk.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

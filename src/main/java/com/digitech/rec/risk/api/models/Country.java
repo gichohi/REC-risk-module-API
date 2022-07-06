@@ -1,4 +1,4 @@
-package com.degitech.rec.risk.api.models;
+package com.digitech.rec.risk.api.models;
 
 import java.util.Date;
 
@@ -6,22 +6,19 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "branches")
+@Table(name = "countries")
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Branch {
+public class Country {
     @Id
     private String id;
 
@@ -29,11 +26,10 @@ public class Branch {
 
     private String name;
 
-    @CreationTimestamp
-    @Column(name="created_at")
-    private Date createdAt;
+    @Column(name = "region_id")
+    private String regionId;
 
     @UpdateTimestamp
-    @Column(name="updated_at")
+    @Column(name = "updated_at")
     private Date updatedAt;
 }
